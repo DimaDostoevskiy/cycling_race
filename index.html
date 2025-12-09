@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/style.css" />
+  </head>
+  <body>
+    <div class="popap__overlay popap__overlay_active" id="port_popap">
+      <div class="popap__card" style="color: var(--color-primary)">
+        <div style="display: flex; flex-direction: column">
+          <label for="port_input">COM port</label>
+          <input
+            style="width: 240px"
+            type="text"
+            id="port_input"
+            required
+            placeholder="COM1"
+            value="COM4"
+          />
+        </div>
+        <div class="btn" id="btn_connect">Подключить</div>
+      </div>
+    </div>
+    <div class="popap__overlay" id="win_popap">
+      <div class="popap__card" style="color: var(--color-primary)">
+        <h1>Finish!</h1>
+        <h3 id="win_name">Finish!</h3>
+        <h3 id="win_time">Finish!</h3>
+        <h3 id="win_distance">Finish!</h3>
+      </div>
+    </div>
+    <div class="popap__overlay" id="start_popap">
+      <div class="popap__card">
+        <div style="display: flex; flex-direction: column; margin-bottom: 16px">
+          <label for="distance">Distance (m)</label>
+          <input
+            style="width: 240px; margin-right: 8px"
+            type="number"
+            id="distance"
+            required
+            value="250"
+          />
+        </div>
+        <div class="popap__section">
+          <div style="display: flex; flex-direction: column">
+            <label for="rider_1_name">Rider 1</label>
+            <input
+              style="width: 240px; margin-right: 8px"
+              type="text"
+              id="rider_1_name"
+              required
+              value="A"
+            />
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <label for="rider_1_r">Choose wheel size:</label>
+            <select name="rider_1_r" id="rider_1_r">
+              <option value="2102">700x18C</option>
+              <option value="2100">700x20C</option>
+              <option value="2125">700x23C</option>
+              <option value="2135">700x25C</option>
+              <option value="2150">700x28C</option>
+            </select>
+          </div>
+        </div>
+        <div class="popap__section">
+          <div style="display: flex; flex-direction: column">
+            <label for="rider_2_name">Rider 2</label>
+            <input
+              style="width: 240px; margin-right: 8px"
+              type="text"
+              id="rider_2_name"
+              required
+              value="B"
+            />
+          </div>
+          <div style="display: flex; flex-direction: column">
+            <label for="rider_2_r">Choose wheel size:</label>
+            <select name="rider_2_r" id="rider_2_r">
+              <option value="2102">700x18C</option>
+              <option value="2100">700x20C</option>
+              <option value="2125">700x23C</option>
+              <option value="2135">700x25C</option>
+              <option value="2150">700x28C</option>
+            </select>
+          </div>
+        </div>
+        <div class="btn" id="btn_start_race">Начать гонку!</div>
+      </div>
+    </div>
+    <div class="riders-info">
+      <table>
+        <thead>
+          <tr>
+            <th scope="col"></th>
+            <th scope="col">Rider</th>
+            <th scope="col">Metres</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="t_rider_1">
+            <th scope="row">1</th>
+            <th id="t_mame_1">Chris Chris</th>
+            <td id="t_dist_1">250 m</td>
+          </tr>
+          <tr id="t_rider_2">
+            <th scope="row">2</th>
+            <th id="t_mame_2">Dennis Chris</th>
+            <td id="t_dist_2">124 m</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <header>
+      <div class="race-time" id="race_time">00:00:0</div>
+      <div id="race_indicator" class="indicator"></div>
+      <div class="btn btn_start" id="btn_open_popap">Start</div>
+    </header>
+    <main>
+      <canvas id="canvas" width="1280" height="240"></canvas>
+    </main>
+    <script src="./src/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,35 @@
+{
+  "name": "cycling_race",
+  "version": "1.0.1",
+  "description": "Cycling race at home",
+  "main": "main.js",
+  "type": "commonjs",
+  "scripts": {
+    "dev": "electron .",
+    "build": "electron-builder"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DosDima/cycling_race.git"
+  },
+  "author": "Dima Dostoevskiy",
+  "license": "SEE LICENSE IN LICENSE file",
+  "bugs": {
+    "url": "https://github.com/DosDima/cycling_race/issues"
+  },
+  "homepage": "https://github.com/DosDima/cycling_race#readme",
+  "devDependencies": {
+    "@types/node": "^22.7.4",
+    "electron": "^32.1.2",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "serialport": "^12.0.0"
+  },
+  "build": {
+    "appId": "cycling_race",
+    "mac": {
+      "category": "your.app.category.type"
+    }
+  }
+}
